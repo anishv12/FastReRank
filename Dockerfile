@@ -1,4 +1,5 @@
 # Use Python base image
+RUN pip install uvicorn
 FROM python:3.9-slim
 
 # Set the working directory
