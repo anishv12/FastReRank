@@ -26,7 +26,7 @@ def verify_api_key(api_key: str = Header(...)):
 
 # Define an endpoint for reranking with API Key authentication
 @app.post("/rerank", response_model=RerankResponse)
-async def rerank(request: RerankRequest):
+async def rerank(request: RerankRequest, api_key: str = Depends(verify_api_key)):
     """
     Rerank endpoint for the HybridReranker, protected by API Key.
     """
