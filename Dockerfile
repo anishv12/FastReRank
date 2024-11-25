@@ -1,5 +1,5 @@
 # Use Python base image
-FROM python:3.9-slim
+FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn-devel
 
 # Set the working directory
 WORKDIR /app
